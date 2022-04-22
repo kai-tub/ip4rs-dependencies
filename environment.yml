@@ -1,0 +1,22 @@
+name: ip4rs
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  # Use oldest python version according to NEP-29
+  - python=3.8
+  - numpy>=1.22
+  - sentinelsat=1
+  - jupyter=1
+  # updating geopandas or rasterio should
+  # be done deliberately and tested!
+  - matplotlib
+  - geopandas=0.10
+  - rasterio=1.2
+  # for development
+  - jupyterlab
+  - black
+  - isort
+  - flake8
+  - pytest
+  - pre-commit
