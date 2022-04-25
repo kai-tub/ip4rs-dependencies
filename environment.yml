@@ -14,6 +14,7 @@ dependencies:
   - matplotlib
   - geopandas=0.10
   - rasterio=1.2
+  - osmnx
   - seaborn
   - easydict
   - scikit-learn
