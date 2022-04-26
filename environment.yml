@@ -9,6 +9,8 @@ dependencies:
   - numpy>=1.22
   - sentinelsat=1
   - jupyter=1
+  - pydantic=1
+  - dynaconf
   # updating geopandas or rasterio should
   # be done deliberately and tested!
   - matplotlib
