@@ -22,4 +22,8 @@ update_lock: install_python_deps
 
 # Install the IPython Kernel for the new environment
 install_ipykernel:
-	{{env-cmd}} python -m ipykernel install --user
+	{{env-cmd}} python -m ipykernel install --user --name {{env-name}}
+
+# Run CMDS in the generated environment
+run +CMDS:
+	{{env-cmd}} {{CMDS}}
