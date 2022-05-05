@@ -39,3 +39,10 @@ dependencies:
   - flake8
   - pytest
   - pre-commit
+  - pip
+  # implicit deps for simple_downloader
+  - requests
+  - rich
+  - tqdm
+  - pip:
+    - simple_downloader

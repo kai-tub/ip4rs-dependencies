@@ -1,6 +1,13 @@
 FROM jupyter/base-notebook
 ARG conda_env=ip4rs
 EXPOSE 8888
+
+USER root
+
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+
+USER ${NB_UID}
+
 # these are used in ENTRYPOINT `start-notebook.sh` script
 ENV NOTEBOOK_ARGS="--no-browser --ip=0.0.0.0 --LabApp.trust_xheaders=True --LabApp.disable_check_xsrf=False --LabApp.allow_remote_access=True --LabApp.allow_origin='*'"
 
@@ -13,6 +20,8 @@ RUN cd "/home/${NB_USER}/tmp/" && \
 RUN "${CONDA_DIR}/envs/${conda_env}/bin/python" -m ipykernel install --user --name="${conda_env}" && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
+
+RUN git clone --depth=1 https://gitlab.inria.fr/naudeber/DeepHyperX.git /tmp/DeepHyperX
 
 # any additional pip installs can be added by uncommenting the following line
 # RUN "${CONDA_DIR}/envs/${conda_env}/bin/pip" install --quiet --no-cache-dir
