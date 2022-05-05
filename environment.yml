@@ -45,4 +45,4 @@ dependencies:
   - rich
   - tqdm
   - pip:
-    - simple_downloader
+    - "simple_downloader>=0.1.1"

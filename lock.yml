@@ -104,7 +104,7 @@ dependencies:
   - isort=5.10.1=pyhd8ed1ab_0
   - jbig=2.1=h7f98852_2003
   - jedi=0.18.1=py38h578d9bd_1
-  - jinja2=3.1.1=pyhd8ed1ab_0
+  - jinja2=3.1.2=pyhd8ed1ab_0
   - joblib=1.1.0=pyhd8ed1ab_0
   - jpeg=9e=h166bdaf_1
   - json-c=0.16=hc379101_0
@@ -230,7 +230,7 @@ dependencies:
   - poppler=22.01.0=h1434ded_2
   - poppler-data=0.4.11=hd8ed1ab_0
   - postgresql=14.2=h2510834_0
-  - pre-commit=2.18.1=py38h578d9bd_1
+  - pre-commit=2.19.0=py38h578d9bd_0
   - proj=9.0.0=h93bde94_1
   - prometheus_client=0.14.1=pyhd8ed1ab_0
   - prompt-toolkit=3.0.29=pyha770c72_0
@@ -341,6 +341,6 @@ dependencies:
   - zlib=1.2.11=h166bdaf_1014
   - zstd=1.5.2=ha95c52a_0
   - pip:
-    - simple-downloader==0.1.0
+    - simple-downloader==0.1.1
 prefix: /home/kai/mambaforge/envs/ip4rs
 
