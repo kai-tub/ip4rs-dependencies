@@ -21,7 +21,7 @@ dependencies:
   - blas=2.114=mkl
   - blas-devel=3.9.0=14_linux64_mkl
   - bleach=5.0.0=pyhd8ed1ab_0
-  - blosc=1.21.1=hd32f23e_0
+  - blosc=1.21.1=h83bc5f7_2
   - boost-cpp=1.74.0=h6cacc03_7
   - branca=0.5.0=pyhd8ed1ab_0
   - brotli=1.0.9=h166bdaf_7
@@ -74,7 +74,7 @@ dependencies:
   - freetype=2.10.4=h0708190_1
   - freexl=1.0.6=h7f98852_0
   - future=0.18.2=py38h578d9bd_5
-  - gdal=3.4.2=py38hdd69c9e_6
+  - gdal=3.4.2=py38hdd69c9e_7
   - geojson=2.5.0=py_0
   - geomet=0.3.0=pyhd3deb0d_0
   - geopandas=0.10.2=pyhd8ed1ab_1
@@ -109,9 +109,9 @@ dependencies:
   - jpeg=9e=h166bdaf_1
   - json-c=0.16=hc379101_0
   - json5=0.9.5=pyh9f0ad1d_0
-  - jsonschema=4.4.0=pyhd8ed1ab_0
+  - jsonschema=4.5.1=pyhd8ed1ab_0
   - jupyter=1.0.0=py38h578d9bd_7
-  - jupyter_client=7.3.0=pyhd8ed1ab_0
+  - jupyter_client=7.3.1=pyhd8ed1ab_0
   - jupyter_console=6.4.3=pyhd8ed1ab_0
   - jupyter_core=4.9.2=py38h578d9bd_0
   - jupyter_server=1.17.0=pyhd8ed1ab_0
@@ -141,7 +141,7 @@ dependencies:
   - libevent=2.1.10=h9b69904_4
   - libffi=3.4.2=h7f98852_5
   - libgcc-ng=11.2.0=h1d223b6_16
-  - libgdal=3.4.2=hb785293_6
+  - libgdal=3.4.2=h56144a5_7
   - libgfortran-ng=11.2.0=h69a702a_16
   - libgfortran5=11.2.0=h5c6108e_16
   - libglib=2.70.2=h174f98d_4
@@ -192,7 +192,7 @@ dependencies:
   - mysql-common=8.0.29=haf5c9bc_0
   - mysql-libs=8.0.29=h28c427c_0
   - nbclassic=0.3.7=pyhd8ed1ab_0
-  - nbclient=0.6.2=pyhd8ed1ab_0
+  - nbclient=0.6.3=pyhd8ed1ab_0
   - nbconvert=6.5.0=pyhd8ed1ab_0
   - nbconvert-core=6.5.0=pyhd8ed1ab_0
   - nbconvert-pandoc=6.5.0=pyhd8ed1ab_0
@@ -227,7 +227,7 @@ dependencies:
   - pixman=0.40.0=h36c2ea0_0
   - platformdirs=2.5.1=pyhd8ed1ab_0
   - pluggy=1.0.0=py38h578d9bd_3
-  - poppler=22.01.0=h1434ded_2
+  - poppler=22.04.0=h1434ded_0
   - poppler-data=0.4.11=hd8ed1ab_0
   - postgresql=14.2=h2510834_0
   - pre-commit=2.19.0=py38h578d9bd_0
@@ -246,7 +246,7 @@ dependencies:
   - pyflakes=2.4.0=pyhd8ed1ab_0
   - pygments=2.12.0=pyhd8ed1ab_0
   - pyopenssl=22.0.0=pyhd8ed1ab_0
-  - pyparsing=3.0.8=pyhd8ed1ab_0
+  - pyparsing=3.0.9=pyhd8ed1ab_0
   - pyproj=3.3.1=py38h5b5ac8f_0
   - pyqt=5.12.3=py38h578d9bd_8
   - pyqt-impl=5.12.3=py38h0ffb2e6_8
@@ -272,7 +272,7 @@ dependencies:
   - rasterio=1.2.10=py38h667dea4_5
   - readline=8.1=h46c0cb4_0
   - requests=2.27.1=pyhd8ed1ab_0
-  - rich=12.3.0=pyhd8ed1ab_0
+  - rich=12.4.1=pyhd8ed1ab_0
   - rtree=1.0.0=py38h02d302b_1
   - scikit-learn=1.0.2=py38h1561384_0
   - scipy=1.8.0=py38h56a6a73_1
@@ -280,15 +280,15 @@ dependencies:
   - seaborn-base=0.11.2=pyhd8ed1ab_0
   - send2trash=1.8.0=pyhd8ed1ab_0
   - sentinelsat=1.1.1=pyhd8ed1ab_0
-  - setuptools=62.1.0=py38h578d9bd_0
-  - shapely=1.8.2=py38h97f7145_0
+  - setuptools=62.2.0=py38h578d9bd_0
+  - shapely=1.8.2=py38h97f7145_1
   - six=1.16.0=pyh6c4a22f_0
-  - snappy=1.1.8=he1b5a44_3
+  - snappy=1.1.9=hbd366e4_0
   - sniffio=1.2.0=py38h578d9bd_3
   - snuggs=1.4.7=py_0
   - soupsieve=2.3.1=pyhd8ed1ab_0
   - spectral=0.22.4=pyh6c4a22f_0
-  - sqlite=3.38.4=h4ff8645_0
+  - sqlite=3.38.5=h4ff8645_0
   - stack_data=0.2.0=pyhd8ed1ab_0
   - statsmodels=0.13.2=py38h6c62de6_0
   - tbb=2021.5.0=h924138e_1
@@ -305,7 +305,7 @@ dependencies:
   - torchvision=0.12.0=py38_cu102
   - tornado=6.1=py38h0a891b7_3
   - tqdm=4.64.0=pyhd8ed1ab_0
-  - traitlets=5.1.1=pyhd8ed1ab_0
+  - traitlets=5.2.0=pyhd8ed1ab_0
   - typed-ast=1.5.3=py38h0a891b7_0
   - typing-extensions=4.2.0=hd8ed1ab_1
   - typing_extensions=4.2.0=pyha770c72_1
@@ -341,6 +341,6 @@ dependencies:
   - zlib=1.2.11=h166bdaf_1014
   - zstd=1.5.2=ha95c52a_0
   - pip:
-    - simple-downloader==0.1.1
+    - simple-downloader==0.1.2
 prefix: /home/kai/mambaforge/envs/ip4rs
 

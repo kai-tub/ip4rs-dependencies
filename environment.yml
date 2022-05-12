@@ -10,6 +10,7 @@ dependencies:
   - numpy>=1.22
   - sentinelsat=1
   - jupyter=1
+  - notebook
   - pydantic=1
   - dynaconf
   # updating geopandas or rasterio should
@@ -45,4 +46,4 @@ dependencies:
   - rich
   - tqdm
   - pip:
-    - "simple_downloader>=0.1.1"
+    - "simple_downloader>=0.1.2"
