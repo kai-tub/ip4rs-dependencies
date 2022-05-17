@@ -7,7 +7,7 @@ dependencies:
   - _openmp_mutex=4.5=2_kmp_llvm
   - affine=2.3.1=pyhd8ed1ab_0
   - alsa-lib=1.2.3.2=h166bdaf_0
-  - anyio=3.5.0=py38h578d9bd_0
+  - anyio=3.6.1=py38h578d9bd_0
   - argon2-cffi=21.3.0=pyhd8ed1ab_0
   - argon2-cffi-bindings=21.2.0=py38h0a891b7_2
   - asttokens=2.0.5=pyhd8ed1ab_0
@@ -58,7 +58,7 @@ dependencies:
   - executing=0.8.3=pyhd8ed1ab_0
   - expat=2.4.8=h27087fc_0
   - ffmpeg=4.3=hf484d3e_0
-  - filelock=3.6.0=pyhd8ed1ab_0
+  - filelock=3.7.0=pyhd8ed1ab_0
   - fiona=1.8.21=py38ha349e16_1
   - flake8=4.0.1=pyhd8ed1ab_2
   - flit-core=3.7.1=pyhd8ed1ab_0
@@ -86,7 +86,7 @@ dependencies:
   - gmp=6.2.1=h58526e2_0
   - gnutls=3.6.13=h85f3911_1
   - gst-plugins-base=1.20.2=hcf0ee16_0
-  - gstreamer=1.20.2=hd4edc92_0
+  - gstreamer=1.20.2=hd4edc92_1
   - hdf4=4.2.15=h10796ff_3
   - hdf5=1.12.1=nompi_h2386368_104
   - html2text=2020.1.16=py_0
@@ -95,7 +95,7 @@ dependencies:
   - idna=3.3=pyhd8ed1ab_0
   - importlib-metadata=4.11.3=py38h578d9bd_1
   - importlib_metadata=4.11.3=hd8ed1ab_1
-  - importlib_resources=5.7.1=pyhd8ed1ab_0
+  - importlib_resources=5.7.1=pyhd8ed1ab_1
   - iniconfig=1.1.1=pyh9f0ad1d_0
   - ipykernel=6.13.0=py38h7f3c49e_0
   - ipython=8.3.0=py38h578d9bd_0
@@ -272,7 +272,7 @@ dependencies:
   - rasterio=1.2.10=py38h667dea4_5
   - readline=8.1=h46c0cb4_0
   - requests=2.27.1=pyhd8ed1ab_0
-  - rich=12.4.1=pyhd8ed1ab_0
+  - rich=12.4.1=pyhd8ed1ab_1
   - rtree=1.0.0=py38h02d302b_1
   - scikit-learn=1.1.0=py38hf80bbf7_0
   - scipy=1.8.0=py38h56a6a73_1
@@ -294,18 +294,18 @@ dependencies:
   - tbb=2021.5.0=h924138e_1
   - terminado=0.13.3=py38h578d9bd_1
   - threadpoolctl=3.1.0=pyh8a188c0_0
-  - tiledb=2.8.2=h1e4a385_0
+  - tiledb=2.8.3=h1e4a385_0
   - tinycss2=1.1.1=pyhd8ed1ab_0
   - tk=8.6.12=h27826a3_0
   - toml=0.10.2=pyhd8ed1ab_0
   - tomli=2.0.1=pyhd8ed1ab_0
   - torchaudio=0.11.0=py38_cu102
   - torchfile=0.1.0=py_0
-  - torchinfo=1.6.5=pyhd8ed1ab_0
+  - torchinfo=1.6.6=pyhd8ed1ab_0
   - torchvision=0.12.0=py38_cu102
   - tornado=6.1=py38h0a891b7_3
   - tqdm=4.64.0=pyhd8ed1ab_0
-  - traitlets=5.2.0=pyhd8ed1ab_0
+  - traitlets=5.2.1.post0=pyhd8ed1ab_0
   - typed-ast=1.5.3=py38h0a891b7_0
   - typing-extensions=4.2.0=hd8ed1ab_1
   - typing_extensions=4.2.0=pyha770c72_1
