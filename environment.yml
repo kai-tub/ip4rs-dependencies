@@ -30,6 +30,7 @@ dependencies:
   - visdom
   - openpyxl
   - ipywidgets
+  - jupyterlab_widgets
   # install cuda also for CPU only to keep the CPU/GPU version identical
   # this "only" results in larger files
   - cudatoolkit=10.2
