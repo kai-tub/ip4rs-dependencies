@@ -28,3 +28,5 @@ RUN git clone --depth=1 https://gitlab.inria.fr/naudeber/DeepHyperX.git /tmp/Dee
 
 # if you want this environment to be the default one, uncomment the following line:
 RUN echo "conda activate ${conda_env}" >> "${HOME}/.bashrc"
+
+CMD ["mamba", "run", "--live-stream", "--name", "ip4rs", "jupyter","lab","--ip=0.0.0.0","--port=8888","--no-browser","--allow-root", "--LabApp.trust_xheaders=True", "--LabApp.disable_check_xsrf=False", "--LabApp.allow_remote_access=True", "--LabApp.allow_origin='*'"]
