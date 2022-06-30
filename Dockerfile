@@ -14,7 +14,7 @@ ENV NOTEBOOK_ARGS="--no-browser --ip=0.0.0.0 --LabApp.trust_xheaders=True --LabA
 COPY --chown=${NB_UID}:${NB_GID} lock.yml "/home/${NB_USER}/tmp/"
 RUN cd "/home/${NB_USER}/tmp/" && \
     mamba env create -p "${CONDA_DIR}/envs/${conda_env}" -f lock.yml && \
-    mamba install -n base -c conda-forge jupyterlab_widgets jupyter ipywidgets jupyterlab && \
+    mamba install -y -n base -c conda-forge jupyterlab_widgets jupyter ipywidgets jupyterlab && \
     mamba clean --all -f -y
 
 # create Python kernel and link it to jupyter
