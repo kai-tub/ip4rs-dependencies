@@ -30,5 +30,5 @@ RUN git clone --depth=1 https://git.tu-berlin.de/rsim/deephyperx2.0.git /tmp/Dee
 # if you want this environment to be the default one, uncomment the following line:
 RUN echo "conda activate ${conda_env}" >> "${HOME}/.bashrc"
 
-CMD ["--no-browser", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--LabApp.trust_xheaders=True", "--LabApp.disable_check_xsrf=False", "--LabApp.allow_remote_access=True", "--LabApp.allow_origin='*'"]
-ENTRYPOINT ["jupyter","lab"]
+# rely on start-notebook.sh
+# CMD ["jupyter","lab", "--no-browser", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--LabApp.trust_xheaders=True", "--LabApp.disable_check_xsrf=False", "--LabApp.allow_remote_access=True", "--LabApp.allow_origin='*'"]
