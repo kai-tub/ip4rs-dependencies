@@ -21,7 +21,7 @@ RUN "${CONDA_DIR}/envs/${conda_env}/bin/python" -m ipykernel install --user --na
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
-RUN git clone --depth=1 https://gitlab.inria.fr/naudeber/DeepHyperX.git /tmp/DeepHyperX
+RUN git clone --depth=1 https://git.tu-berlin.de/rsim/deephyperx2.0.git /tmp/DeepHyperX
 
 # any additional pip installs can be added by uncommenting the following line
 # RUN "${CONDA_DIR}/envs/${conda_env}/bin/pip" install --quiet --no-cache-dir
@@ -29,4 +29,5 @@ RUN git clone --depth=1 https://gitlab.inria.fr/naudeber/DeepHyperX.git /tmp/Dee
 # if you want this environment to be the default one, uncomment the following line:
 RUN echo "conda activate ${conda_env}" >> "${HOME}/.bashrc"
 
-CMD ["mamba", "run", "--live-stream", "--name", "ip4rs", "jupyter","lab","--ip=0.0.0.0","--port=8888","--no-browser","--allow-root", "--LabApp.trust_xheaders=True", "--LabApp.disable_check_xsrf=False", "--LabApp.allow_remote_access=True", "--LabApp.allow_origin='*'"]
+CMD ["--no-browser", "--ip=0.0.0.0", "--LabApp.trust_xheaders=True", "--LabApp.disable_check_xsrf=False", "--LabApp.allow_remote_access=True", "--LabApp.allow_origin='*'"]
+ENTRYPOINT ["mamba", "run", "--live-stream", "--name", "ip4rs", "jupyter","lab"]
