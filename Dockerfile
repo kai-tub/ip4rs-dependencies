@@ -31,4 +31,4 @@ RUN git clone --depth=1 https://git.tu-berlin.de/rsim/deephyperx2.0.git /tmp/Dee
 RUN echo "conda activate ${conda_env}" >> "${HOME}/.bashrc"
 
 CMD ["--no-browser", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--LabApp.trust_xheaders=True", "--LabApp.disable_check_xsrf=False", "--LabApp.allow_remote_access=True", "--LabApp.allow_origin='*'"]
-ENTRYPOINT ["mamba", "run", "--live-stream", "--name", "ip4rs", "jupyter","lab"]
+ENTRYPOINT ["jupyter","lab"]
