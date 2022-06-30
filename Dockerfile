@@ -19,8 +19,10 @@ RUN cd "/home/${NB_USER}/tmp/" && \
 
 # create Python kernel and link it to jupyter
 RUN "${CONDA_DIR}/envs/${conda_env}/bin/python" -m ipykernel install --user --name="${conda_env}" && \
+    mamba run --name base jupyter lab build && \
     fix-permissions "${CONDA_DIR}" && \
-    fix-permissions "/home/${NB_USER}"
+    fix-permissions "/home/${NB_USER}" && \
+    fix-permissions "/opt/conda/"
 
 RUN git clone --depth=1 https://git.tu-berlin.de/rsim/deephyperx2.0.git /tmp/DeepHyperX
 
