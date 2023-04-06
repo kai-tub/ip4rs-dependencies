@@ -1,0 +1,4 @@
+[[language]]
+name = "nix"
+language-server = { command = "rnix-lsp" }
+auto-format = true
