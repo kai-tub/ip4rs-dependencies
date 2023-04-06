@@ -10,6 +10,7 @@ USER ${NB_UID}
 
 COPY --chown=${NB_UID}:${NB_GID} lock.yml "/home/${NB_USER}/tmp/"
 RUN cd "/home/${NB_USER}/tmp/" && \
+    mamba --version > /tmp/mamba.version && cat /tmp/mamba.version && \
     mamba env create -p "${CONDA_DIR}/envs/${conda_env}" -f lock.yml && \
     mamba install -y -n base -c conda-forge jupyterlab_widgets jupyter ipywidgets jupyterlab && \
     mamba clean --all -f -y
