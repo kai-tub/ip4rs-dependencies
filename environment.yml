@@ -34,10 +34,6 @@ dependencies:
   - openpyxl
   - ipywidgets
   - jupyterlab_widgets
-  # install cuda also for CPU only to keep the CPU/GPU version identical
-  # this "only" results in larger files
-  # - cudatoolkit=10.2
-  # for development
   - jupyterlab
   - black
   - isort
@@ -48,6 +44,4 @@ dependencies:
   - requests
   - rich
   - tqdm
-  # TODO: replace the following code!
-  # - pip:
-  #   - "simple_downloader>=0.1.2"
+
