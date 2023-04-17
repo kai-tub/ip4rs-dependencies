@@ -1,4 +1,4 @@
-FROM mambaorg/micromamba:1.4.2
+FROM --platform=linux/amd64 mambaorg/micromamba:1.4.2
 COPY --chown=$MAMBA_USER:$MAMBA_USER lock.yml /tmp/lock.yml
 RUN micromamba install --yes --name base --file /tmp/lock.yml && \
     micromamba clean --all --yes
