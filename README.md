@@ -30,7 +30,8 @@ over the `docker`-based solution.
   - If using MacOS/Windows, we recommend using _Docker Desktop_
 1. Install [just](https://github.com/casey/just)
 2. Run `just docker-build` (may take up to 20min) or directly `docker build . -t ip4rs`
-3. Run image with correct port `docker run -p=8888 -v <HOST_PATH>:/<container> ip4rs:latest `
+3. Run image with correct port, mounted volume (to persist files), and as `root` user to write to mounted volume: 
+`docker run -p=8888:8888 --volume="$PWD":/home/mambauser/workspace --user=root ip4rs:latest`  
 
 ## Common issues
 
