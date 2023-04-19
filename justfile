@@ -33,9 +33,7 @@ jupyter:
 docker-build:
 	docker build {{justfile_directory()}}/ -t {{image-name}}
 
-# Run ip4rs docker file with port forwarding,
-# volume mounting and root user to allow writing to mounted
-# volume
+# Run ip4rs docker file with port forwarding & volume mounting of invocing path
 docker-jupyter:
 	docker run -p=8888:8888 --volume={{invocation_directory()}}/:/home/mambauser/workspace --user=root {{image-name}}:latest
 

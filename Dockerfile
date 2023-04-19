@@ -12,8 +12,13 @@ WORKDIR /home/$MAMBA_USER/workspace
 # (otherwise environment/python will not be found)
 ARG MAMBA_DOCKERFILE_ACTIVATE=1 
 
+# change back to root user to make it easier to
+# mount volumes for students
+USER root
+
 # guarantee trouble-some libraries are loaded correctly
 RUN python -c "import rasterio; import geopandas; import torch; import numpy; print('\nCould load libraries!\n');"
 
 EXPOSE 8888
 ENTRYPOINT [ "/usr/local/bin/_entrypoint.sh", "jupyter", "lab", "--port=8888", "--ip=0.0.0.0", "--no-browser", "--ServerApp.trust_xheaders=True", "--ServerApp.disable_check_xsrf=False", "--ServerApp.allow_remote_access=True", "--ServerApp.allow_origin='*'", "--allow-root"]
+
