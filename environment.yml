@@ -44,4 +44,9 @@ dependencies:
   - requests
   - rich
   - tqdm
+# for conda-lock
+platforms:
+  - osx-64
+  - osx-arm64
+  - linux-64
 

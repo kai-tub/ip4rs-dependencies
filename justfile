@@ -6,24 +6,32 @@ env-cmd := "micromamba run --name=" + env-name
 set dotenv-load := false
 
 # Install environment from lock.yml
-install: install_locked_python_deps install_ipykernel
+install: install_base install_locked_python_deps install_ipykernel
+
+# Install base dependencies
+install_base:
+	micromamba create --yes --name locker --channel=conda-forge conda-lock
+
+# Generate global lock
+global_lock: install_base
+	micromamba run --name conda-lock conda-lock lock environment.yml
 
 # Install from lock file (not created with explicit!)
-install_locked_python_deps:
-	micromamba create --yes --name {{env-name}} --file lock.yml
+# install_locked_python_deps:
+# 	micromamba create --yes --name {{env-name}} --file lock.yml
 
 # Install from general environment.yml
-install_python_deps:
-	micromamba create --yes --name {{env-name}} --file environment.yml
+# install_python_deps:
+# 	micromamba create --yes --name {{env-name}} --file environment.yml
 
 # Install dependencies from environment.yml and export to lock.yml
-update_locks: install_python_deps
-	micromamba env --name {{env-name}} export > lock.yml
-	micromamba env export --no-build --no-md5 > relaxed_lock.yml
+# update_locks: install_python_deps
+# 	micromamba env --name {{env-name}} export > lock.yml
+# 	micromamba env export --no-build --no-md5 > relaxed_lock.yml
 
 # Install the IPython Kernel for the new environment
-install_ipykernel:
-	{{env-cmd}} python -m ipykernel install --user --name {{env-name}}
+# install_ipykernel:
+# 	{{env-cmd}} python -m ipykernel install --user --name {{env-name}}
 	
 # Run the jupyter lab environment via all interfaces by default
 jupyter:
