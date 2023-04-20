@@ -23,8 +23,16 @@ render_locks:
 
 update_lock: install_base lock render_locks
 
-install_linux_env:
-	micromamba create --yes --name {{env-name}} --file conda-linux-64.lock
+install_env target:
+	micromamba create --yes --name {{env-name}} --file conda-{{target}}.lock
+
+install_env_linux: (install_env "linux-64")
+
+install_env_osx_intel: (install_env "osx-64")
+
+install_env_osx_arm64: (install_env "osx-arm64")
+
+# install_env
 
 # Install from lock file (not created with explicit!)
 # install_locked_python_deps:
