@@ -1,6 +1,7 @@
 # allow docker image to overwrite the environment
 env-name := env_var_or_default("MAMBA_ENV_NAME", "ip4rs")
 image-name := "ip4rs"
+env := "environment.yml"
 
 env-cmd := "micromamba run --name=" + env-name
 set dotenv-load := false
@@ -13,8 +14,14 @@ install_base:
 	micromamba create --yes --name locker --channel=conda-forge conda-lock
 
 # Generate global lock
-global_lock: install_base
-	micromamba run --name locker conda-lock lock environment.yml
+lock:
+	rm {{env}} # ensure that fresh lock is created
+	micromamba run --name locker conda-lock lock {{env}}
+
+render_locks:
+	micromamba run --name locker conda-lock render 
+
+update_lock: install_base lock render_locks
 
 # Install from lock file (not created with explicit!)
 # install_locked_python_deps:
