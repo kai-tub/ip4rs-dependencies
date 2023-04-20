@@ -6,7 +6,7 @@ env-cmd := "micromamba run --name=" + env-name
 set dotenv-load := false
 
 # Install environment from lock.yml
-install: install_base install_locked_python_deps install_ipykernel
+# install: install_base install_locked_python_deps install_ipykernel
 
 # Install base dependencies
 install_base:
@@ -14,7 +14,7 @@ install_base:
 
 # Generate global lock
 global_lock: install_base
-	micromamba run --name conda-lock conda-lock lock environment.yml
+	micromamba run --name locker conda-lock lock environment.yml
 
 # Install from lock file (not created with explicit!)
 # install_locked_python_deps:
