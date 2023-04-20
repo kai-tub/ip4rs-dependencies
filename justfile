@@ -23,6 +23,9 @@ render_locks:
 
 update_lock: install_base lock render_locks
 
+install_linux_env:
+	micromamba create --yes --name {{env-name}} --file conda-linux-64.lock
+
 # Install from lock file (not created with explicit!)
 # install_locked_python_deps:
 # 	micromamba create --yes --name {{env-name}} --file lock.yml
