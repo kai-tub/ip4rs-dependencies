@@ -19,7 +19,8 @@ lock:
 	micromamba run --name locker conda-lock lock {{env}}
 
 render_locks:
-	micromamba run --name locker conda-lock render 
+	micromamba run --name locker conda-lock render
+	micromamba run --name locker conda-lock render --kind env
 
 update_lock: install_base lock render_locks
 
