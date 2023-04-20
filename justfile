@@ -29,13 +29,24 @@ install_ipykernel:
 jupyter:
 	{{env-cmd}} jupyter lab --ip=0.0.0.0
 
-# Build docker file
+# Build docker file (podman style)
 docker-build:
-	docker build {{justfile_directory()}}/ -t {{image-name}}
+	docker build --format=docker {{justfile_directory()}}/ -t {{image-name}}
 
 # Run ip4rs docker file with port forwarding & volume mounting of invocing path
 docker-jupyter:
 	docker run -p=8888:8888 --volume={{invocation_directory()}}/:/home/mambauser/workspace {{image-name}}:latest
+
+test:
+	#!/usr/bin/env bash
+	set -exuo pipefail
+	! test -e tests/touched
+	docker build --format=docker . -t ip4rs
+	image=$(docker run --volume="$PWD":/home/mambauser/workspace -d ip4rs:latest)
+	docker exec $image micromamba run --name=base jupyter execute tests/test.ipynb
+	docker kill $image
+	rm tests/touched
+	! test -e tests/touched
 
 # Run CMDS in the generated environment
 run +CMDS:

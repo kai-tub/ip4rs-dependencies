@@ -9,25 +9,30 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       pkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
       system = "x86_64-linux";
+      tests = import ./tests/tests.nix pkgs;
     in
     rec {
+
+      packages."${system}" = { } // tests;
+
       devShell.x86_64-linux =
         pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [
-            git
-            micromamba
-            pre-commit
-            # texlive.combined.scheme-full
-          ] ++ (with pkgs-unstable; [
-            helix
-            rnix-lsp
-            # wkhtmltopdf-bin
-            # wkhtmltopdf
-            ripgrep
-            gitui
-            just
-            duf
-          ]);
+          nativeBuildInputs = with pkgs;
+            [
+              git
+              micromamba
+              pre-commit
+              # texlive.combined.scheme-full
+            ] ++ (with pkgs-unstable; [
+              helix
+              rnix-lsp
+              # wkhtmltopdf-bin
+              # wkhtmltopdf
+              ripgrep
+              gitui
+              just
+              duf
+            ]);
         };
     };
 }

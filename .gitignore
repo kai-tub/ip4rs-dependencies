@@ -1,3 +1,4 @@
+result
 touched
 *.ipynb
 !tests/*.ipynb
