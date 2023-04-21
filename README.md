@@ -20,7 +20,7 @@ to missing support of Windows libraries for some dependencies.
 ### Installing locally
 
 1. Install [just](https://github.com/casey/just)
-2. Move to the dependency directory and run `just install_env_<PLATFORM>``
+2. Move to the dependency directory and run `just install_env_<PLATFORM>`
 3. Wait for the command to finish; might take up to 10min for downloading & unpacking
 4. Start `jupyter lab` (`just jupyter`) and select the `ip4rs` kernel
 
