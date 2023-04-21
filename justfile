@@ -15,8 +15,8 @@ install_base:
 
 # Generate global lock
 lock:
-	rm {{env}} # ensure that fresh lock is created
-	micromamba run --name locker conda-lock lock {{env}}
+	# rm conda-lock.yml # ensure that fresh lock is created
+	micromamba run --name locker conda-lock lock --file {{env}}
 
 render_locks:
 	micromamba run --name locker conda-lock render

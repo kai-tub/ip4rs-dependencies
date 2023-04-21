@@ -2,6 +2,7 @@ name: ip4rs
 channels:
   # PyTorch channel *must* be the first channel otherwise CPU from conda-forge is used
   - pytorch
+  - nvidia
   - conda-forge
   - nodefaults
 dependencies:
@@ -28,7 +29,10 @@ dependencies:
   - pytorch=1.13
   - torchvision=0.14
   - torchaudio=0.13
-  - cpuonly
+  # Only install the following for linux-64!
+  - pytorch-cuda=11.7 # [linux-64]
+  # If we only want to use the CPU only variant
+  # - cpuonly
   - torchinfo
   - visdom
   - openpyxl
