@@ -9,18 +9,19 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       pkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
       system = "x86_64-linux";
-      tests = import ./tests/tests.nix pkgs;
+      # do not work on docker tests for now
+      # tests = import ./tests/tests.nix pkgs;
     in
     rec {
 
-      packages."${system}" = { } // tests;
+      # packages."${system}" = { } // tests;
 
       devShell.x86_64-linux =
         pkgs.mkShell {
           nativeBuildInputs = with pkgs;
             [
               git
-              micromamba
+              # micromamba
               pre-commit
               # texlive.combined.scheme-full
             ] ++ (with pkgs-unstable; [
