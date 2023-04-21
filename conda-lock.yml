@@ -9,25 +9,27 @@
 # To update a single package to the latest version compatible with the version constraints in the source:
 #     conda-lock lock  --lockfile conda-lock.yml --update PACKAGE
 # To re-solve the entire environment, e.g. after changing a version constraint in the source file:
-#     conda-lock -f /home/kai/ip4rs-dependencies/environment.yml --lockfile conda-lock.yml
+#     conda-lock -f /home/kaiclasen/ip4rs-dependencies/environment.yml --lockfile conda-lock.yml
 metadata:
   channels:
   - url: pytorch
+    used_env_vars: []
+  - url: nvidia
     used_env_vars: []
   - url: conda-forge
     used_env_vars: []
   - url: nodefaults
     used_env_vars: []
   content_hash:
-    linux-64: 919f2cbb2054c0d58d020d1c085ddbfe07a8ef1b5dad51b83653d6de4d89a945
-    osx-64: 05d9ea85579f9aad8d78b65f53319627afaff1341d795dc8bc75fe578fa24cb2
-    osx-arm64: 0e331ee35d19bbe4a92ac415687b49031ceef2ab1b6e8d77243126564d0e7695
+    linux-64: dff8f9d4d17e0acd9c8689bde4da08ac83a844541113b772d5159561645894a8
+    osx-64: 9a035493bd5d2f0835eb1121e6b52fa096585354fe97dce6b0395145badac508
+    osx-arm64: 35e6f8af5cfa60a2ca440da05129182ddaf28487a692e83a42cbc66d1e4a31d5
   platforms:
   - osx-64
   - osx-arm64
   - linux-64
   sources:
-  - /home/kai/ip4rs-dependencies/environment.yml
+  - /home/kaiclasen/ip4rs-dependencies/environment.yml
 package:
 - category: main
   dependencies: {}
@@ -51,6 +53,50 @@ package:
   platform: linux-64
   url: https://conda.anaconda.org/conda-forge/linux-64/ca-certificates-2022.12.7-ha878542_0.conda
   version: 2022.12.7
+- category: main
+  dependencies: {}
+  hash:
+    md5: 79859ac9109109826d77e5e2bbbe18b5
+    sha256: e75a62cf7cebdd7773c8deb148e06030714ed4c5fb6c8dc3f7792bb7b6e8ce6c
+  manager: conda
+  name: cuda-cudart
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/cuda-cudart-11.7.99-0.tar.bz2
+  version: 11.7.99
+- category: main
+  dependencies: {}
+  hash:
+    md5: 099e29408a247a0a50bc976dc5e716b0
+    sha256: 11d6d31fec7f54a9390d167741da51c05fa4fa31ce64eac250d069570c06cf2c
+  manager: conda
+  name: cuda-cupti
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/cuda-cupti-11.7.101-0.tar.bz2
+  version: 11.7.101
+- category: main
+  dependencies: {}
+  hash:
+    md5: f56ebbd9aa130d0fae45079d8bf76617
+    sha256: 76eeb17cbdc9767e85fd3e20a8e06f1999aa190fc042265da4eabf550aa12ac9
+  manager: conda
+  name: cuda-nvrtc
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/cuda-nvrtc-11.7.99-0.tar.bz2
+  version: 11.7.99
+- category: main
+  dependencies: {}
+  hash:
+    md5: 87381e82875d3b341e2d48a5c4d26e2b
+    sha256: 9458059b0f5e1d28a09d9cb32e441f01c050e2d92630020011fa009b98e0f445
+  manager: conda
+  name: cuda-nvtx
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/cuda-nvtx-11.7.91-0.tar.bz2
+  version: 11.7.91
 - category: main
   dependencies: {}
   hash:
@@ -109,6 +155,72 @@ package:
 - category: main
   dependencies: {}
   hash:
+    md5: 1d3211d2deb549b84f6fdaf96f7cbb88
+    sha256: 14c30da20a9c1519ec5358f493222913ede2fa1048b9c65cfdf29e4c1df4b057
+  manager: conda
+  name: libcublas
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/libcublas-11.10.3.66-0.tar.bz2
+  version: 11.10.3.66
+- category: main
+  dependencies: {}
+  hash:
+    md5: dc69f1daa40372e9b869064ab926ee26
+    sha256: cd57e77ca3ec6aee4dc0915fc0db96091a0b7600f130a57ac24a05ff0bfce832
+  manager: conda
+  name: libcufft
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/libcufft-10.7.2.124-h4fbf590_0.tar.bz2
+  version: 10.7.2.124
+- category: main
+  dependencies: {}
+  hash:
+    md5: 45b4fa3189d9d326367497cda7ef6ace
+    sha256: aa131313764309edf16cef60267afff4c9b0a558aa9c56ebe3641cf362f76996
+  manager: conda
+  name: libcufile
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/libcufile-1.6.1.9-0.tar.bz2
+  version: 1.6.1.9
+- category: main
+  dependencies: {}
+  hash:
+    md5: 7a790d8cff49b91c7ca38c87c8c99b15
+    sha256: a5aaae9174230d78a9fe6ef8e2c42ffc4f64c82ba105c94d0730e0907c23fc07
+  manager: conda
+  name: libcurand
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/libcurand-10.3.2.106-0.tar.bz2
+  version: 10.3.2.106
+- category: main
+  dependencies: {}
+  hash:
+    md5: c4de49e8b2f01065962f2fec81fb7058
+    sha256: fbcd211720e29bdb8a42a4360de6d73c2c6cc44040bedefc45c9a8ffb1f906c0
+  manager: conda
+  name: libcusolver
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/libcusolver-11.4.0.1-0.tar.bz2
+  version: 11.4.0.1
+- category: main
+  dependencies: {}
+  hash:
+    md5: 9ca85f813fbc5e8b811a1ad4ca451911
+    sha256: c0b0684bc8ad02af7a91506533203eb68467d6ad1fbf3be4aacaa9aa39c89a3b
+  manager: conda
+  name: libcusparse
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/libcusparse-11.7.4.91-0.tar.bz2
+  version: 11.7.4.91
+- category: main
+  dependencies: {}
+  hash:
     md5: 164b4b1acaedc47ee7e658ae6b308ca3
     sha256: 03ea784edd12037dc3a7a0078ff3f9c3383feabb34d5ba910bb2fd7a21a2d961
   manager: conda
@@ -120,6 +232,28 @@ package:
 - category: main
   dependencies: {}
   hash:
+    md5: 0a55ecd0b813fe5774ede297007e5413
+    sha256: 34091bd3ca4910ce5f7715637863a76f09739782090586dff9767f1632a631dd
+  manager: conda
+  name: libnpp
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/libnpp-11.7.4.75-0.tar.bz2
+  version: 11.7.4.75
+- category: main
+  dependencies: {}
+  hash:
+    md5: 32a0a604688ee485878887ff4c086f77
+    sha256: bdd39dcb18ee6fcbd41fc4fa4b45c8e368abb18289fe164151d83080b8128eb5
+  manager: conda
+  name: libnvjpeg
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/libnvjpeg-11.8.0.2-0.tar.bz2
+  version: 11.8.0.2
+- category: main
+  dependencies: {}
+  hash:
     md5: 1030b1f38c129f2634eae026f704fe60
     sha256: 0289e6a7b9a5249161a3967909e12dcfb4ab4475cdede984635d3fb65c606f08
   manager: conda
@@ -128,17 +262,6 @@ package:
   platform: linux-64
   url: https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-12.2.0-h46fd767_19.tar.bz2
   version: 12.2.0
-- category: main
-  dependencies: {}
-  hash:
-    md5: 2dcd1acca05c11410d4494d7fc7dfa2a
-    sha256: 63415fe64e99f8323d0191d45ea5b1ec3973317e728b9071267ffb7ff3b38364
-  manager: conda
-  name: mkl-include
-  optional: false
-  platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/mkl-include-2022.1.0-h84fe81f_915.tar.bz2
-  version: 2022.1.0
 - category: main
   dependencies: {}
   hash:
@@ -164,13 +287,13 @@ package:
 - category: main
   dependencies: {}
   hash:
-    md5: 49565ed726991fd28d08a39885caa88d
-    sha256: d48c964188ca49660d750cffd73698d217cf94e694cd51987f9f186425435e76
+    md5: a948316e36fb5b11223b3fcfa93f8358
+    sha256: c16316183f51b74ca5eee4dcb8631052f328c0bbf244176734a0b7d390b81ee3
   manager: conda
   name: pytorch-mutex
   optional: false
   platform: linux-64
-  url: https://conda.anaconda.org/pytorch/noarch/pytorch-mutex-1.0-cpu.tar.bz2
+  url: https://conda.anaconda.org/pytorch/noarch/pytorch-mutex-1.0-cuda.tar.bz2
   version: '1.0'
 - category: main
   dependencies: {}
@@ -185,16 +308,25 @@ package:
   version: 2023c
 - category: main
   dependencies:
-    pytorch-mutex: 1.0 cpu
+    cuda-cudart: '>=11.7.99'
+    cuda-nvrtc: '>=11.7.99'
+    libcublas: '>=11.10.3.66'
+    libcufft: '>=10.7.2.91'
+    libcufile: '>=1.3.1.18'
+    libcurand: '>=10.2.10.91'
+    libcusolver: '>=11.4.0.1'
+    libcusparse: '>=11.7.4.91'
+    libnpp: '>=11.7.4.75'
+    libnvjpeg: '>=11.8.0.2'
   hash:
-    md5: 1cf3a59ef90a4078c253e3b02c272065
-    sha256: f9107aca2a9d23a032634644df5cdb8d0185337891593ce540adc480810ab539
+    md5: 6fc99cc9d2e7d6d2da1c10c5e140ab8c
+    sha256: 0e28c0d2f6462437dfe21c3a8e17351adc76f9882a5f1e8be8dce3d6bf8f19a9
   manager: conda
-  name: cpuonly
+  name: cuda-libraries
   optional: false
   platform: linux-64
-  url: https://conda.anaconda.org/pytorch/noarch/cpuonly-2.0-0.tar.bz2
-  version: '2.0'
+  url: https://conda.anaconda.org/nvidia/linux-64/cuda-libraries-11.7.1-0.tar.bz2
+  version: 11.7.1
 - category: main
   dependencies:
     font-ttf-dejavu-sans-mono: ''
@@ -224,6 +356,18 @@ package:
   version: 12.2.0
 - category: main
   dependencies:
+    cuda-libraries: '>=11.7.1'
+  hash:
+    md5: e88cf61af312d2621a0224d431be511b
+    sha256: 99fccfabca4fda89d71fb92a42b77052f2b43e8ad9207bca1f88c3c518be3f82
+  manager: conda
+  name: cuda-runtime
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/nvidia/linux-64/cuda-runtime-11.7.1-0.tar.bz2
+  version: 11.7.1
+- category: main
+  dependencies:
     fonts-conda-forge: ''
   hash:
     md5: fee5683a3f04bd15cbd8318b096a27ab
@@ -234,6 +378,29 @@ package:
   platform: linux-64
   url: https://conda.anaconda.org/conda-forge/noarch/fonts-conda-ecosystem-1-0.tar.bz2
   version: '1'
+- category: main
+  dependencies:
+    cuda-cudart: '>=11.7,<11.8'
+    cuda-cupti: '>=11.7,<11.8'
+    cuda-libraries: '>=11.7,<11.8'
+    cuda-nvrtc: '>=11.7,<11.8'
+    cuda-nvtx: '>=11.7,<11.8'
+    cuda-runtime: '>=11.7,<11.8'
+    libcublas: '>=11.10.1.25,<11.11.3.6'
+    libcufft: '>=10.7.2.50,<10.9.0.58'
+    libcusolver: '>=11.3.5.50,<11.4.1.48'
+    libcusparse: '>=11.7.3.50,<11.7.5.86'
+    libnpp: '>=11.7.3.21,<11.8.0.86'
+    libnvjpeg: '>=11.7.2.34,<11.9.0.86'
+  hash:
+    md5: 053a1309e4f688c49b414d59292b6ca1
+    sha256: 1faf584f6ece316a69f3340cc4a45779e2db23f0d8e8ac5a4eec859542b78fbc
+  manager: conda
+  name: pytorch-cuda
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/pytorch/linux-64/pytorch-cuda-11.7-h778d358_3.tar.bz2
+  version: '11.7'
 - category: main
   dependencies:
     _libgcc_mutex: 0.1 conda_forge
@@ -2531,7 +2698,7 @@ package:
   version: 2.10.0
 - category: main
   dependencies:
-    python: ==2.7.*|>=3.4
+    python: 2.7.*|>=3.4
   hash:
     md5: 076becd9e05608f8dc72757d5f3a91ff
     sha256: 74c63fd03f1f1ea2b54e8bc529fd1a600aaafb24027b738d0db87909ee3a33dc
@@ -2543,7 +2710,7 @@ package:
   version: '2.21'
 - category: main
   dependencies:
-    python: ==2.7.*|>=3.5
+    python: 2.7.*|>=3.5
   hash:
     md5: 44b7d77d96560c93e0e11437a3c35254
     sha256: 1a6fd59626b360ef498d8cd61b4a8a3ef771a385f97c6f574fccaa100a8bb99e
@@ -3447,17 +3614,17 @@ package:
 - category: main
   dependencies:
     _openmp_mutex: '>=4.5'
-    llvm-openmp: '>=14.0.3'
+    llvm-openmp: '>=15.0.6'
     tbb: 2021.*
   hash:
-    md5: b9c8f925797a93dbff45e1626b025a6b
-    sha256: 767318c4f2057822a7ebc238d6065ce12c6ae60df4ab892758adb79b1057ce02
+    md5: a7ce56d5757f5b57e7daabe703ade5bb
+    sha256: 5322750d5e96ff5d96b1457db5fb6b10300f2bc4030545e940e17b57c4e96d00
   manager: conda
   name: mkl
   optional: false
   platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/mkl-2022.1.0-h84fe81f_915.tar.bz2
-  version: 2022.1.0
+  url: https://conda.anaconda.org/conda-forge/linux-64/mkl-2022.2.1-h84fe81f_16997.conda
+  version: 2022.2.1
 - category: main
   dependencies:
     python: ''
@@ -3747,6 +3914,18 @@ package:
   version: 21.2.0
 - category: main
   dependencies:
+    mkl: ''
+  hash:
+    md5: 349aef876b1d8c9dccae01de20d5b385
+    sha256: a9a9125029a66905fc9e932dfd4f595be3a59a30db37fd7bf4a675a5c6151d62
+  manager: conda
+  name: blas
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/blas-1.0-mkl.tar.bz2
+  version: '1.0'
+- category: main
+  dependencies:
     jinja2: ''
     python: '>=3.7'
     setuptools: ''
@@ -3969,19 +4148,6 @@ package:
   platform: linux-64
   url: https://conda.anaconda.org/conda-forge/linux-64/libspatialite-5.0.1-h221c8f1_23.conda
   version: 5.0.1
-- category: main
-  dependencies:
-    mkl: 2022.1.0 h84fe81f_915
-    mkl-include: 2022.1.0 h84fe81f_915
-  hash:
-    md5: 69ba49e445f87aea2cba343a71a35ca2
-    sha256: 93d957608b17ada3039ff0acad2b8596451caa6829b3502fe87375e639ffc34e
-  manager: conda
-  name: mkl-devel
-  optional: false
-  platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/mkl-devel-2022.1.0-ha770c72_916.tar.bz2
-  version: 2022.1.0
 - category: main
   dependencies:
     python: '>=3.7'
@@ -4404,6 +4570,23 @@ package:
   version: 23.1.1
 - category: main
   dependencies:
+    blas: '* mkl'
+    mkl: '>=2018'
+    python: '>=3.9,<3.10.0a0'
+    pytorch-cuda: '>=11.7,<11.8'
+    pytorch-mutex: 1.0 cuda
+    typing_extensions: ''
+  hash:
+    md5: 9704aa36a7c4051d3fd3c8eb83e38e97
+    sha256: f078ee258a1a8084c72a9737f462e739cfabc1d634b5661e03d6efcb453ac305
+  manager: conda
+  name: pytorch
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/pytorch/linux-64/pytorch-1.13.1-py3.9_cuda11.7_cudnn8.5.0_0.tar.bz2
+  version: 1.13.1
+- category: main
+  dependencies:
     aiofiles: '>=22.1.0,<23'
     aiosqlite: '>=0.17.0,<1'
     python: '>=3.7'
@@ -4435,20 +4618,6 @@ package:
   platform: linux-64
   url: https://conda.anaconda.org/conda-forge/noarch/jupyter_client-8.2.0-pyhd8ed1ab_0.conda
   version: 8.2.0
-- category: main
-  dependencies:
-    libblas: 3.9.0 16_linux64_mkl
-    libcblas: 3.9.0 16_linux64_mkl
-    liblapack: 3.9.0 16_linux64_mkl
-  hash:
-    md5: 44ccc4d4dca6a8d57fa17442bc64b5a1
-    sha256: 935036dc46c483cba8288c6de58d461ab3f42915715ffe9485105ad1dd203a0e
-  manager: conda
-  name: liblapacke
-  optional: false
-  platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/liblapacke-3.9.0-16_linux64_mkl.tar.bz2
-  version: 3.9.0
 - category: main
   dependencies:
     importlib-metadata: '>=3.6'
@@ -4547,6 +4716,19 @@ package:
   version: 5.15.8
 - category: main
   dependencies:
+    python: '>=3.6'
+    pytorch: '>=1.6'
+  hash:
+    md5: 84a431c32d1b3360ac0ed3cca53eaecc
+    sha256: 40af1fd816e73103ed0dde3cdc59572a3334c8c3681f17e2f4b92c847f1bc94b
+  manager: conda
+  name: torchinfo
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/conda-forge/noarch/torchinfo-1.7.2-pyhd8ed1ab_0.conda
+  version: 1.7.2
+- category: main
+  dependencies:
     brotlipy: '>=0.6.0'
     certifi: ''
     cryptography: '>=1.3.4'
@@ -4563,23 +4745,6 @@ package:
   platform: linux-64
   url: https://conda.anaconda.org/conda-forge/noarch/urllib3-1.26.15-pyhd8ed1ab_0.conda
   version: 1.26.15
-- category: main
-  dependencies:
-    libblas: 3.9.0 16_linux64_mkl
-    libcblas: 3.9.0 16_linux64_mkl
-    liblapack: 3.9.0 16_linux64_mkl
-    liblapacke: 3.9.0 16_linux64_mkl
-    mkl: '>=2022.1.0,<2023.0a0'
-    mkl-devel: 2022.1.*
-  hash:
-    md5: 3f92c1c9e1c0e183462c5071aa02cae1
-    sha256: a7da65ca4e0322317cbc4d387c4a5f075cdc7fcd12ad9f7f18da758c7532749a
-  manager: conda
-  name: blas-devel
-  optional: false
-  platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/blas-devel-3.9.0-16_linux64_mkl.tar.bz2
-  version: 3.9.0
 - category: main
   dependencies:
     libgcc-ng: '>=12'
@@ -4753,25 +4918,20 @@ package:
   version: 0.23.1
 - category: main
   dependencies:
-    _openmp_mutex: '>=4.5'
-    blas-devel: 3.9.0 16_linux64_mkl
-    libblas: 3.9.0 16_linux64_mkl
-    libcblas: 3.9.0 16_linux64_mkl
-    libgcc-ng: '>=12'
-    libgfortran-ng: ''
-    libgfortran5: '>=10.4.0'
-    liblapack: 3.9.0 16_linux64_mkl
-    liblapacke: 3.9.0 16_linux64_mkl
-    llvm-openmp: '>=14.0.4'
+    numpy: '>=1.11'
+    python: '>=3.9,<3.10.0a0'
+    pytorch: 1.13.1
+    pytorch-cuda: 11.7.*
+    pytorch-mutex: 1.0 cuda
   hash:
-    md5: c196a26abf6b4f132c88828ab7c2231c
-    sha256: 87056ebdc90b6d1ea6726d04d42b844cc302112e80508edbf7bf1f1a4fd3fed2
+    md5: 329e1931e771a5bdd4bb3b555ea4ccf5
+    sha256: 712ee43eb63c7093650dc82749fb0991eec30c93dcf5b6667f9c85bc9d978452
   manager: conda
-  name: blas
+  name: torchaudio
   optional: false
   platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/blas-2.116-mkl.tar.bz2
-  version: '2.116'
+  url: https://conda.anaconda.org/pytorch/linux-64/torchaudio-0.13.1-py39_cu117.tar.bz2
+  version: 0.13.1
 - category: main
   dependencies:
     attrs: '>=17'
@@ -4973,6 +5133,27 @@ package:
   version: 1.2.1
 - category: main
   dependencies:
+    ffmpeg: '>=4.2'
+    jpeg: ''
+    libpng: ''
+    numpy: '>=1.11'
+    pillow: '>=5.3.0,!=8.3.*'
+    python: '>=3.9,<3.10.0a0'
+    pytorch: 1.13.1
+    pytorch-cuda: 11.7.*
+    pytorch-mutex: 1.0 cuda
+    requests: ''
+  hash:
+    md5: ec0dad2404c541586f972e5207727829
+    sha256: 3c995765c6ec5909dbf4a35de58b35cb481bfeb97b09b2bd931d3a1d9fced7ae
+  manager: conda
+  name: torchvision
+  optional: false
+  platform: linux-64
+  url: https://conda.anaconda.org/pytorch/linux-64/torchvision-0.14.1-py39_cu117.tar.bz2
+  version: 0.14.1
+- category: main
+  dependencies:
     ipykernel: '>=4.5.1'
     ipython: '>=6.1.0'
     jupyterlab_widgets: '>=3.0.7,<4.1.dev0'
@@ -5067,22 +5248,6 @@ package:
   platform: linux-64
   url: https://conda.anaconda.org/conda-forge/noarch/nbconvert-pandoc-7.3.1-pyhd8ed1ab_0.conda
   version: 7.3.1
-- category: main
-  dependencies:
-    blas: '* mkl'
-    mkl: '>=2018'
-    python: '>=3.9,<3.10.0a0'
-    pytorch-mutex: 1.0 cpu
-    typing_extensions: ''
-  hash:
-    md5: 11bbe2a9ff1870da22a4318ff09309b9
-    sha256: d19bfa100afa7b4ead06a973cbb4a15fae78857bcfd17d110d7b66912a762120
-  manager: conda
-  name: pytorch
-  optional: false
-  platform: linux-64
-  url: https://conda.anaconda.org/pytorch/linux-64/pytorch-1.13.1-py3.9_cpu_0.tar.bz2
-  version: 1.13.1
 - category: main
   dependencies:
     ipykernel: '>=4.1'
@@ -5251,54 +5416,6 @@ package:
   platform: linux-64
   url: https://conda.anaconda.org/conda-forge/noarch/seaborn-base-0.12.2-pyhd8ed1ab_0.conda
   version: 0.12.2
-- category: main
-  dependencies:
-    numpy: '>=1.11'
-    python: '>=3.9,<3.10.0a0'
-    pytorch: 1.13.1
-    pytorch-mutex: 1.0 cpu
-  hash:
-    md5: 041fdbb49f16d5c7b2604d0e0f6fa957
-    sha256: ac08752b59ed63665b520bb26b358c5605c849bb84bba95c219091dccf2c24a9
-  manager: conda
-  name: torchaudio
-  optional: false
-  platform: linux-64
-  url: https://conda.anaconda.org/pytorch/linux-64/torchaudio-0.13.1-py39_cpu.tar.bz2
-  version: 0.13.1
-- category: main
-  dependencies:
-    python: '>=3.6'
-    pytorch: '>=1.6'
-  hash:
-    md5: 84a431c32d1b3360ac0ed3cca53eaecc
-    sha256: 40af1fd816e73103ed0dde3cdc59572a3334c8c3681f17e2f4b92c847f1bc94b
-  manager: conda
-  name: torchinfo
-  optional: false
-  platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/noarch/torchinfo-1.7.2-pyhd8ed1ab_0.conda
-  version: 1.7.2
-- category: main
-  dependencies:
-    ffmpeg: '>=4.2'
-    jpeg: ''
-    libpng: ''
-    numpy: '>=1.11'
-    pillow: '>=5.3.0,!=8.3.*'
-    python: '>=3.9,<3.10.0a0'
-    pytorch: 1.13.1
-    pytorch-mutex: 1.0 cpu
-    requests: ''
-  hash:
-    md5: a62af9b5578b0ecc017ea4831ef7ff68
-    sha256: 0865e3887abb293ec780be2114fe4b347a040a2c813f99f44712d5bd78f99959
-  manager: conda
-  name: torchvision
-  optional: false
-  platform: linux-64
-  url: https://conda.anaconda.org/pytorch/linux-64/torchvision-0.14.1-py39_cpu.tar.bz2
-  version: 0.14.1
 - category: main
   dependencies:
     jsonpatch: ''
@@ -5894,17 +6011,6 @@ package:
 - category: main
   dependencies: {}
   hash:
-    md5: 49565ed726991fd28d08a39885caa88d
-    sha256: d48c964188ca49660d750cffd73698d217cf94e694cd51987f9f186425435e76
-  manager: conda
-  name: pytorch-mutex
-  optional: false
-  platform: osx-64
-  url: https://conda.anaconda.org/pytorch/noarch/pytorch-mutex-1.0-cpu.tar.bz2
-  version: '1.0'
-- category: main
-  dependencies: {}
-  hash:
     md5: a7ba8e96323b9d8ce4f0edc4f4dab27f
     sha256: 0d4b111314bea267454f48691debc1ff4c0ce8cb91491d2be30381de498ac59e
   manager: conda
@@ -5968,18 +6074,6 @@ package:
   platform: osx-64
   url: https://conda.anaconda.org/conda-forge/osx-64/yaml-0.2.5-h0d85af4_2.tar.bz2
   version: 0.2.5
-- category: main
-  dependencies:
-    pytorch-mutex: 1.0 cpu
-  hash:
-    md5: 1cf3a59ef90a4078c253e3b02c272065
-    sha256: f9107aca2a9d23a032634644df5cdb8d0185337891593ce540adc480810ab539
-  manager: conda
-  name: cpuonly
-  optional: false
-  platform: osx-64
-  url: https://conda.anaconda.org/pytorch/noarch/cpuonly-2.0-0.tar.bz2
-  version: '2.0'
 - category: main
   dependencies:
     libexpat: 2.5.0 hf0c8a7f_1
@@ -6698,6 +6792,18 @@ package:
   platform: osx-64
   url: https://conda.anaconda.org/conda-forge/noarch/aiofiles-22.1.0-pyhd8ed1ab_0.tar.bz2
   version: 22.1.0
+- category: main
+  dependencies:
+    python: '>=2.7'
+  hash:
+    md5: 54ac328d703bff191256ffa1183126d1
+    sha256: b209a68ac55eb9ecad7042f0d4eedef5da924699f6cdf54ac1826869cfdae742
+  manager: conda
+  name: appnope
+  optional: false
+  platform: osx-64
+  url: https://conda.anaconda.org/conda-forge/noarch/appnope-0.1.3-pyhd8ed1ab_0.tar.bz2
+  version: 0.1.3
 - category: main
   dependencies:
     python: '>=3.5'
@@ -7449,7 +7555,7 @@ package:
   version: 2.10.0
 - category: main
   dependencies:
-    python: ==2.7.*|>=3.4
+    python: 2.7.*|>=3.4
   hash:
     md5: 076becd9e05608f8dc72757d5f3a91ff
     sha256: 74c63fd03f1f1ea2b54e8bc529fd1a600aaafb24027b738d0db87909ee3a33dc
@@ -7461,7 +7567,7 @@ package:
   version: '2.21'
 - category: main
   dependencies:
-    python: ==2.7.*|>=3.5
+    python: 2.7.*|>=3.5
   hash:
     md5: 44b7d77d96560c93e0e11437a3c35254
     sha256: 1a6fd59626b360ef498d8cd61b4a8a3ef771a385f97c6f574fccaa100a8bb99e
@@ -9451,7 +9557,8 @@ package:
   version: 1.9.1
 - category: main
   dependencies:
-    __linux: ''
+    __osx: ''
+    appnope: ''
     backcall: ''
     decorator: ''
     jedi: '>=0.16'
@@ -9465,13 +9572,13 @@ package:
     traitlets: '>=5'
     typing_extensions: ''
   hash:
-    md5: e89d0c5836e45f9e6a66c5c24fc9ef35
-    sha256: a1229642730268400044073c314c2cf2cb7161ec44ea824aaaad68404320c545
+    md5: 4b25de6cd2891e6bce87de8c5d85e27c
+    sha256: 9fbb93740835ecb7a27b9917528d1b4e2a1c557e20e01f863fab41ecb3b88ac6
   manager: conda
   name: ipython
   optional: false
   platform: osx-64
-  url: https://conda.anaconda.org/conda-forge/noarch/ipython-8.12.0-pyh41d4057_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/ipython-8.12.0-pyhd1c38e8_0.conda
   version: 8.12.0
 - category: main
   dependencies:
@@ -9570,7 +9677,8 @@ package:
   version: 0.14.0
 - category: main
   dependencies:
-    __linux: ''
+    __osx: ''
+    appnope: ''
     comm: '>=0.1.1'
     debugpy: '>=1.6.5'
     ipython: '>=7.23.1'
@@ -9585,13 +9693,13 @@ package:
     tornado: '>=6.1'
     traitlets: '>=5.4.0'
   hash:
-    md5: 1b463a5f4b7c83f509f6a1168a6ef554
-    sha256: 0b4531611e0b8dc89f11a3e5411cc994b7baf4998970b85430439a59d32aebf9
+    md5: 3bbe4a71a9d5d8e13c1504e3cd077b32
+    sha256: f9d226cbef29c614087a41da8dc119f34b23c9cf8ee3077a8e489aa43ad27ae2
   manager: conda
   name: ipykernel
   optional: false
   platform: osx-64
-  url: https://conda.anaconda.org/conda-forge/noarch/ipykernel-6.22.0-pyh210e3f2_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/ipykernel-6.22.0-pyh736e0ef_0.conda
   version: 6.22.0
 - category: main
   dependencies:
@@ -10542,17 +10650,6 @@ package:
 - category: main
   dependencies: {}
   hash:
-    md5: 49565ed726991fd28d08a39885caa88d
-    sha256: d48c964188ca49660d750cffd73698d217cf94e694cd51987f9f186425435e76
-  manager: conda
-  name: pytorch-mutex
-  optional: false
-  platform: osx-arm64
-  url: https://conda.anaconda.org/pytorch/noarch/pytorch-mutex-1.0-cpu.tar.bz2
-  version: '1.0'
-- category: main
-  dependencies: {}
-  hash:
     md5: 96779d3be996d78411b083f99a51199c
     sha256: 0a60ff53272547a0f80862f0a1969a5d1cec16bd2e9098ed5b07d317682a4361
   manager: conda
@@ -10639,18 +10736,6 @@ package:
   platform: osx-arm64
   url: https://conda.anaconda.org/conda-forge/osx-arm64/aom-3.5.0-h7ea286d_0.tar.bz2
   version: 3.5.0
-- category: main
-  dependencies:
-    pytorch-mutex: 1.0 cpu
-  hash:
-    md5: 1cf3a59ef90a4078c253e3b02c272065
-    sha256: f9107aca2a9d23a032634644df5cdb8d0185337891593ce540adc480810ab539
-  manager: conda
-  name: cpuonly
-  optional: false
-  platform: osx-arm64
-  url: https://conda.anaconda.org/pytorch/noarch/cpuonly-2.0-0.tar.bz2
-  version: '2.0'
 - category: main
   dependencies:
     libexpat: 2.5.0 hb7217d7_1
@@ -11339,6 +11424,18 @@ package:
   platform: osx-arm64
   url: https://conda.anaconda.org/conda-forge/noarch/aiofiles-22.1.0-pyhd8ed1ab_0.tar.bz2
   version: 22.1.0
+- category: main
+  dependencies:
+    python: '>=2.7'
+  hash:
+    md5: 54ac328d703bff191256ffa1183126d1
+    sha256: b209a68ac55eb9ecad7042f0d4eedef5da924699f6cdf54ac1826869cfdae742
+  manager: conda
+  name: appnope
+  optional: false
+  platform: osx-arm64
+  url: https://conda.anaconda.org/conda-forge/noarch/appnope-0.1.3-pyhd8ed1ab_0.tar.bz2
+  version: 0.1.3
 - category: main
   dependencies:
     python: '>=3.5'
@@ -12034,7 +12131,7 @@ package:
   version: 2.10.0
 - category: main
   dependencies:
-    python: ==2.7.*|>=3.4
+    python: 2.7.*|>=3.4
   hash:
     md5: 076becd9e05608f8dc72757d5f3a91ff
     sha256: 74c63fd03f1f1ea2b54e8bc529fd1a600aaafb24027b738d0db87909ee3a33dc
@@ -12046,7 +12143,7 @@ package:
   version: '2.21'
 - category: main
   dependencies:
-    python: ==2.7.*|>=3.5
+    python: 2.7.*|>=3.5
   hash:
     md5: 44b7d77d96560c93e0e11437a3c35254
     sha256: 1a6fd59626b360ef498d8cd61b4a8a3ef771a385f97c6f574fccaa100a8bb99e
@@ -13879,7 +13976,8 @@ package:
   version: 0.12.2
 - category: main
   dependencies:
-    __linux: ''
+    __osx: ''
+    appnope: ''
     backcall: ''
     decorator: ''
     jedi: '>=0.16'
@@ -13893,13 +13991,13 @@ package:
     traitlets: '>=5'
     typing_extensions: ''
   hash:
-    md5: e89d0c5836e45f9e6a66c5c24fc9ef35
-    sha256: a1229642730268400044073c314c2cf2cb7161ec44ea824aaaad68404320c545
+    md5: 4b25de6cd2891e6bce87de8c5d85e27c
+    sha256: 9fbb93740835ecb7a27b9917528d1b4e2a1c557e20e01f863fab41ecb3b88ac6
   manager: conda
   name: ipython
   optional: false
   platform: osx-arm64
-  url: https://conda.anaconda.org/conda-forge/noarch/ipython-8.12.0-pyh41d4057_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/ipython-8.12.0-pyhd1c38e8_0.conda
   version: 8.12.0
 - category: main
   dependencies:
@@ -14002,7 +14100,8 @@ package:
   version: 0.14.0
 - category: main
   dependencies:
-    __linux: ''
+    __osx: ''
+    appnope: ''
     comm: '>=0.1.1'
     debugpy: '>=1.6.5'
     ipython: '>=7.23.1'
@@ -14017,13 +14116,13 @@ package:
     tornado: '>=6.1'
     traitlets: '>=5.4.0'
   hash:
-    md5: 1b463a5f4b7c83f509f6a1168a6ef554
-    sha256: 0b4531611e0b8dc89f11a3e5411cc994b7baf4998970b85430439a59d32aebf9
+    md5: 3bbe4a71a9d5d8e13c1504e3cd077b32
+    sha256: f9d226cbef29c614087a41da8dc119f34b23c9cf8ee3077a8e489aa43ad27ae2
   manager: conda
   name: ipykernel
   optional: false
   platform: osx-arm64
-  url: https://conda.anaconda.org/conda-forge/noarch/ipykernel-6.22.0-pyh210e3f2_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/ipykernel-6.22.0-pyh736e0ef_0.conda
   version: 6.22.0
 - category: main
   dependencies:

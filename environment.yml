@@ -30,7 +30,7 @@ dependencies:
   - torchvision=0.14
   - torchaudio=0.13
   # Only install the following for linux-64!
-  - pytorch-cuda=11.7 # [linux-64]
+  - pytorch-cuda=11.7 # [linux]
   # If we only want to use the CPU only variant
   # - cpuonly
   - torchinfo
