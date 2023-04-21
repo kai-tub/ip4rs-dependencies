@@ -1,4 +1,7 @@
+result
+touched
 *.ipynb
+!tests/*.ipynb
 data/
 .devcontainer/
 # Byte-compiled / optimized / DLL files
